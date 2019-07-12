@@ -4,12 +4,16 @@
 {% endblock %}
 {% block content %}
 <div class="container" style="margin-top: 15%;">
- <section class="text-center">
-  <h2 class="mb-3 font-weight-bold">Insert link</h2>
-  <input class="form-control" type="text" placeholder="URL" aria-label="Search"> 				
-  <div class="row d-flex justify-content-center my-4">
-   <div class="col-md-8">
-    <button type="button" class="btn btn-dark">Search</button>
-  </div>
+	<section class="text-center">
+		<h2 class="mb-3 font-weight-bold">Insert link</h2>
+		<form action="/search/get_photo" method="get">
+			<input class="form-control" type="text" name="get_photo" placeholder="URL" aria-label="Search"> 
+			<div class="row d-flex justify-content-center my-4">
+				<div class="col-md-8">
+					<button type="submit" class="btn btn-dark">Search</button>
+				</div>
+			</div>
+		</form>
+	</section>
 </div>
 {% endblock %}
